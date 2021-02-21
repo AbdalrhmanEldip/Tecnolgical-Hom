@@ -1,0 +1,119 @@
+/* ------Main_Start--------*/
+.main {
+  width: 100%;
+  height: calc(90vh - 80px);
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background: #ecf0f1;
+  padding-left: 50px;
+  overflow-x: hidden;
+  z-index: 0;
+}
+.content img {
+  position: absolute;
+  right: 10%;
+  width: 400px;
+  -webkit-user-drag: none;
+  right: -50%;
+}
+@keyframes content-img {
+  0% {
+    opacity: 0;
+    right: -50%;
+  }
+  100% {
+    opacity: 1;
+    right: 10%;
+  }
+}
+.content h1 {
+  font-size: 45px;
+  line-height: 85px;
+  transform: translateX(-50px);
+  opacity: 0;
+}
+@keyframes content-h1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.content h1 font {
+  color: var(--main-Color);
+}
+.content p {
+  font-weight: 600;
+  color: var(--dark-Color);
+  padding-bottom: 20px;
+  transform: translateX(-50px);
+  opacity: 0;
+}
+@keyframes content-p {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.content a {
+  padding: 10px 20px;
+  font-weight: 600;
+  background: var(--main-Color);
+  color: var(--light-Color);
+  border-radius: 5px;
+  transform: translateY(50px);
+  opacity: 0;
+}
+@keyframes content-a {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.parent {
+  position: relative;
+}
+.main {
+  position: absolute;
+}
+.overup {
+  z-index: 1;
+}
+.overup a {
+  animation: content-a 0.8s linear forwards;
+  animation-delay: 1s;
+}
+.overup p {
+  animation: content-p 0.9s linear forwards;
+  animation-delay: 0.6s;
+}
+.overup h1 {
+  animation: content-h1 1s linear forwards;
+  animation-delay: 0.1s;
+}
+.overup img {
+  animation: content-img 1s linear forwards;
+  animation-delay: 1.2s;
+}
+.content a:hover {
+  background: var(--hover-Color);
+}
+/* ------Main_Start--------*/

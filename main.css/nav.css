@@ -1,0 +1,142 @@
+/*---------Nav_Start---------*/
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  box-shadow: 5px 5px 5px rgba(5, 5, 5, 0.1);
+}
+nav > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 20px;
+  padding-right: 0;
+  width: 400px;
+  height: auto;
+  position: fixed;
+  top: 9.5%;
+  right: -40%;
+  /* border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%; */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  /* background-color: var(--list-Color); */
+  backdrop-filter: blur(30px);
+}
+nav > ul li {
+  padding: 30px 0;
+  display: inline-block;
+  font-weight: 600;
+}
+nav > ul li a {
+  width: 200px;
+  height: 30px;
+  display: inline-block;
+  text-align: right;
+  padding: 10px;
+  color: var(--dark-Color);
+  padding-bottom: 30px;
+  transition: color 0.5s;
+  cursor: pointer;
+  position: relative;
+}
+.list-show::after {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.active::after {
+  content: "-";
+}
+.drop_list ol {
+  padding: 10px 0;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+nav a:hover,
+ol:hover {
+  color: var(--main-Color);
+}
+.drop_list {
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.8s;
+}
+.logo {
+  width: 30%;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--main-Color);
+  font-family: "Kalam", cursive;
+}
+.logo font {
+  color: var(--dark-Color);
+  font-family: "Kalam", cursive;
+}
+.search {
+  width: 35%;
+  margin-right: 30px;
+  position: relative;
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 40px;
+}
+.search input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  border: 1px solid rgb(163, 157, 157);
+  border-radius: 30px;
+  outline: 0;
+  padding-left: 40px;
+}
+.search i {
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+  font-size: 17px;
+  font-weight: 700;
+  left: 20px;
+  color: rgb(163, 157, 157);
+}
+.search button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 30px;
+  width: 20%;
+  outline: 0;
+  border: 0;
+  background: var(--btn-Color);
+  color: var(--light-Color);
+  font-size: 19px;
+  padding: 2px;
+  z-index: 2;
+}
+.account {
+  width: 10%;
+}
+.account i {
+  font-size: 20px;
+  -webkit-text-stroke: 1px var(--dark-Color);
+}
+.account a {
+  color: var(--dark-Color);
+  font-weight: 600;
+  padding-right: 8px;
+}
+.fa-bars {
+  padding-left: 60px;
+  font-size: 25px;
+}
+.search button:hover {
+  background: var(--hover-Color);
+}
+/*---------Nav_End---------*/
